@@ -92,7 +92,7 @@ npm install -g react-devtools
 react-devtools.cmd
 ```
 
-# Compilation
+## Compilation
 
 TODO
 
