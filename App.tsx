@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {View, Text, FlatList, StyleSheet} from 'react-native';
 import {FAB} from 'react-native-paper';
 import {Record, Interval, RecordType} from './types';
@@ -13,6 +13,40 @@ loadIcons();
 
 const App = () => {
   const [records, setRecords] = useState<Record[]>([]);
+
+  const handleRecordPress = () => {
+    const rec: Record = new Record(new Date(), RecordType.RECORD);
+    setRecords([...records, rec]);
+  };
+
+  const handleBreakPress = () => {
+    const rec: Record = new Record(new Date(), RecordType.BREAK);
+    setRecords([...records, rec]);
+  };
+
+  const handleResetPress = () => setRecords([]);
+
+  const calculateIntervals = useCallback(() => {
+    const intervals: Interval[] = [];
+
+    for (let i = 1; i < records.length; i++) {
+      const prevRecord = records[i - 1];
+      const currRecord = records[i];
+
+      // Get type of the interval
+      let type: RecordType = RecordType.RECORD;
+      if (
+        currRecord.type === RecordType.BREAK &&
+        prevRecord.type === RecordType.BREAK
+      ) {
+        type = RecordType.BREAK;
+      }
+
+      const diff = currRecord.date.getTime() - prevRecord.date.getTime();
+      intervals.push(new Interval(diff, type));
+    }
+    return intervals;
+  }, [records]);
 
   // TESTS in debug mode
   var debug = false;
@@ -33,41 +67,7 @@ const App = () => {
     }
     console.info(`Records Number : ${records.length}`);
     calculateIntervals();
-  }, [records, calculateIntervals]);
-
-  const handleRecordPress = () => {
-    const rec: Record = new Record(new Date(), RecordType.RECORD);
-    setRecords([...records, rec]);
-  };
-
-  const handleBreakPress = () => {
-    const rec: Record = new Record(new Date(), RecordType.BREAK);
-    setRecords([...records, rec]);
-  };
-
-  const handleResetPress = () => setRecords([]);
-
-  const calculateIntervals = () => {
-    const intervals: Interval[] = [];
-
-    for (let i = 1; i < records.length; i++) {
-      const prevRecord = records[i - 1];
-      const currRecord = records[i];
-
-      // Get type of the interval
-      let type: RecordType = RecordType.RECORD;
-      if (
-        currRecord.type === RecordType.BREAK &&
-        prevRecord.type === RecordType.BREAK
-      ) {
-        type = RecordType.BREAK;
-      }
-
-      const diff = currRecord.date.getTime() - prevRecord.date.getTime();
-      intervals.push(new Interval(diff, type));
-    }
-    return intervals;
-  };
+  }, [records, debug, calculateIntervals]);
 
   const calculateTotalInterval = () => {
     const intervals = calculateIntervals();

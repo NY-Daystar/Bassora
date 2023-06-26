@@ -1,6 +1,28 @@
+![GitHub watchers](https://img.shields.io/github/watchers/ny-daystar/bassora)
+![GitHub forks](https://img.shields.io/github/forks/ny-daystar/bassora)
+![GitHub Repo stars](https://img.shields.io/github/stars/ny-daystar/bassora)
+![GitHub repo size](https://img.shields.io/github/repo-size/ny-daystar/bassora)
+![GitHub language count](https://img.shields.io/github/languages/count/ny-daystar/bassora)
+![GitHub top language](https://img.shields.io/github/languages/top/ny-daystar/bassora) <a href="https://codeclimate.com/github/ny-daystar/bassora/maintainability"><img src="https://api.codeclimate.com/v1/badges/715c6f3ffb08de5ca621/maintainability" /></a>  
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/ny-daystar/bassora/newArchitecture)
+![GitHub issues](https://img.shields.io/github/issues/ny-daystar/bassora)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/ny-daystar/bassora)
+![GitHub](https://img.shields.io/github/license/ny-daystar/bassora)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-blue.svg?style=circular)](#contributors)
+
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+![Android](https://img.shields.io/badge/Android-3DDC84?style=flat&logo=android&logoColor=white)
+![iOS](https://img.shields.io/badge/iOS-000000?style=flat&logo=ios&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23323330.svg?style=flat&logo=typescript&logoColor=%23F7DF1E)
+
+![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=flat&logo=node.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white)
+
 # Bassora
 
-Projet React-Native de pointage d'horaire (temps efficient + temps de pause)
+React-Native project to create time-sheet in a day (efficitent time & breaking time)
 
 ## Summary
 
@@ -91,6 +113,10 @@ npm install -g react-devtools
 ```bash
 react-devtools.cmd
 ```
+
+## Tests unitaires
+
+TODO
 
 ## Compilation
 
