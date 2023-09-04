@@ -10,8 +10,6 @@
 ![GitHub](https://img.shields.io/github/license/ny-daystar/bassora)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-blue.svg?style=circular)](#contributors)
 
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=flat&logo=android&logoColor=white)
 ![iOS](https://img.shields.io/badge/iOS-000000?style=flat&logo=ios&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23323330.svg?style=flat&logo=typescript&logoColor=%23F7DF1E)
@@ -97,7 +95,6 @@ npm run android
 # "react-native run-android log-android"
 ```
 
-TODO
 Other commands: `npx react-native run-android`
 
 [To setup new icons with `FontAwesome`](https://fontawesome.com/docs/web/use-with/react-native)
@@ -135,9 +132,9 @@ TODO mettre la doc pour voir comment mettre son application sur le telephone
 
 ## Shortcuts on Android Emulateur
 
-- `Ctrl+M` pour avoir les settings du device
-  - L'inspecteur d'eléments
-  - le moniteur de performance
+- `Ctrl+M` to get setting on device avoir les settings du device
+  - Element insepector
+  - performance monitor
 
 ## Documentation
 
